@@ -8,25 +8,24 @@ namespace Fatorial
         {
 
             double f;
-            Console.Write("Digite o numero que deseja calcular o fatorial: ");
+            Console.Write("Enter the number you want to calculate the factorial: ");
             int numero = int.Parse(Console.ReadLine());
-            //chamada da função fatorial
-            f = fatorial(numero);
 
-            Console.Write("Fatorial de " + numero + " é igual a " + f);
+            f = fatorial(numero);   // Factorial function call
+
+            Console.Write("Factorial of " + numero + " is equal to " + f);
         }
-        //Função recursiva que calcula o fatorial
-        //de um numero inteiro n
+
+        // Recursive function that calculates the factorial of an integer n
+
         static double fatorial(int n)
         {
             double vfat;
 
-            if (n <= 1)
-                //Caso base: fatorial de n <= 1 retorna 1
+            if (n <= 1) // Base case: factorial of n <= 1 returns 1
                 return (1);
-            else
+            else        // Recursive call
             {
-                //Chamada recursiva
                 vfat = n * fatorial(n - 1);
                 return (vfat);
             }
